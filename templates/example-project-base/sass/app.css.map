@@ -1,0 +1,33 @@
+{
+    "version": 3,
+    "mappings": "AMCA,OAAO,CAAC,2DAAI;AGDZ,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;CACvB;;AcJD,AAAA,IAAI,CAAC,CAAC,CAAC;EACH,WAAW,ErBDD,QAAQ,EAAE,UAAU;CqBEjC;;AAED,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "app.scss",
+        "abstracts/_abstracts.scss",
+        "abstracts/_variables.scss",
+        "abstracts/_functions.scss",
+        "abstracts/_mixins.scss",
+        "abstracts/_placeholders.scss",
+        "vendors/_vendors.scss",
+        "base/_base.scss",
+        "base/_animations.scss",
+        "base/_reset.scss",
+        "base/_typography.scss",
+        "components/_components.scss",
+        "components/_buttons.scss",
+        "layout/_layout.scss",
+        "layout/_grid.scss",
+        "layout/_footer.scss",
+        "layout/_forms.scss",
+        "layout/_navbar.scss",
+        "layout/_sidebar.scss",
+        "layout/_header.scss",
+        "pages/_pages.scss",
+        "pages/_home.scss",
+        "themes/_themes.scss",
+        "themes/_default.scss",
+        "_settings.scss"
+    ],
+    "names": [],
+    "file": "app.css"
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/nft-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFT Marketplace</title>
+  </head>
+  <body>
+    <div id="page">
+      <header class="header">
+        <img src="/img/nft-logo.svg" alt="NFT Marketplace Logo" class="header__logo">
+        <nav class="header__nav">
+          <a href="#" class="header__nav-link">Market</a>
+          <a href="#" class="header__nav-link">How it works</a>
+          <a href="#" class="header__nav-link">Gallery</a>
+          <a href="#" class="header__nav-link">About</a>
+        </nav>
+      </header>
+
+      <aside class="aside">
+        <a href="#" class="aside__signup">Sign Up</a>
+        <button class="aside__signin">Sign In</button>
+      </aside>
+
+      <main class="main">
+        <div class="main__left">
+          <section class="hero">
+            <h1 class="hero__title">The <span class="hero__title-highlight">largest</span> NTF market with exceptional items on de bid</h1>
+            <p class="hero__description">Collectible and non-fungible tokens in your hands</p>
+            <div class="hero__cta">
+              <button class="hero__cta-button">Explore</button>
+              <a href="#" class="hero__cta-link">
+                Learn more
+                <img src="/img/arrow-right.svg" alt="Arrow right">
+              </a>
+            </div>
+          </section>
+
+          <section class="feature">
+            <h2 class="feature__title">Featured Artwork</h2>
+            <div class="feature__gallery">
+              <div class="feature__gallery-item">
+                <img src="/img/project-1-img.png" alt="Featured NFT 1">
+              </div>
+              <div class="feature__gallery-item">
+                <img src="/img/project-2-img.png" alt="Featured NFT 2">
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="main__right">
+          <div class="nft-card">
+            <img src="/img/nft-image.png" alt="NFT Artwork" class="nft-card__image">
+            <div class="nft-card__background">
+              <img src="/img/Artzie.png" alt="Artzie" class="nft-card__logo">
+            </div>
+            <div class="nft-card__content">
+              <div class="nft-card__header">
+                <div class="nft-card__owner">
+                  <img src="/img/nft-owner.png" alt="NFT Owner" class="nft-card__owner-avatar">
+                  <div class="nft-card__owner-data">
+                    <p class="nft-card__owner-name">@samanthaw</p>
+                    <h2 class="nft-card__title">Artwork #01</h2>
+                  </div>
+                </div>
+                <div class="nft-card__bid">
+                  <p class="nft-card__bid-label">Current Bid</p>
+                  <p class="nft-card__bid-price">1.00 ETH</p>
+                </div>
+              </div>
+              <div class="nft-card__actions">
+                <button class="nft-card__actions-bid">Bid Now</button>
+                <a href="#" class="nft-card__actions-view">View Artwork</a>
+              </div>
+              <div class="nft-card__stats">
+                <div class="nft-card__stats-item">
+                  <p class="nft-card__stats-item-number">50k+</p>
+                  <p class="nft-card__stats-item-label">Artwork</p>
+                </div>
+                <div class="nft-card__stats-item">
+                  <p class="nft-card__stats-item-number">30k+</p>
+                  <p class="nft-card__stats-item-label">Artist</p>
+                </div>
+                <div class="nft-card__stats-item">
+                  <p class="nft-card__stats-item-number">20k+</p>
+                  <p class="nft-card__stats-item-label">Auction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

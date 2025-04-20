@@ -1,0 +1,427 @@
+@use './variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Belgrano&display=swap');
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: v.$font-family;
+  color: v.$secondary-color;
+  background-color: v.$white;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+/* Contenedor principal */
+#page {
+  min-height: 100vh;
+  display: grid;
+  margin-left: 40px;
+  grid-template: auto 1fr / 1fr;
+  grid-template-areas: "header" "main";
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: v.$spacing-md v.$spacing-xl;
+  position: relative;
+  z-index: 10;
+
+  &__logo {
+    width: 120px;
+    height: auto;
+    order: 1;
+  }
+
+  &__nav {
+    display: flex;
+    gap: v.$spacing-xl;
+    justify-content: center;
+    flex-grow: 1;
+    order: 2;
+    margin-right: 700px;
+
+    &-link {
+      font-weight: 100;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: v.$primary-color;
+      }
+    }
+  }
+}
+
+/* Aside */
+.aside {
+  position: absolute;
+  top: v.$spacing-md;
+  right: v.$spacing-xl;
+  display: flex;
+  gap: v.$spacing-md;
+  z-index: 30;
+  align-items: center;
+  margin-right: 65px;
+
+  &__signup, &__signin {
+    font-weight: 600;
+    padding: v.$spacing-xs v.$spacing-sm;
+    transition: all 0.3s ease;
+  }
+
+  &__signup {
+    color: v.$white;
+    &:hover { color: v.$primary-color; }
+  }
+
+  &__signin {
+    background-color: v.$primary-color;
+    color: v.$white;
+    padding-right: v.$spacing-md;
+    &:hover { background-color: darken(v.$primary-color, 10%); }
+  }
+}
+
+/* Main */
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  padding: 0 v.$spacing-xl v.$spacing-xl;
+  gap: v.$spacing-lg;
+  position: relative;
+  overflow: visible;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-lg;
+    z-index: 10;
+  }
+
+  &__right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: v.$spacing-xl 0;
+
+  &__title {
+    font: 100 60px 'Belgrano', serif;
+    margin-bottom: v.$spacing-md;
+    color: v.$secondary-color;
+    position: relative;
+
+    &-highlight {
+      position: relative;
+      display: inline-block;
+      color: v.$secondary-color;
+      font-family: 'Belgrano', serif;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -35px;
+        left: -6%;
+        right: 10%;
+        width: 250px;
+        height: 150px;
+        background: url('/img/nft-lazo.svg') center/contain no-repeat;
+      }
+    }
+  }
+
+  &__description {
+    font-size: v.$font-size-md;
+    max-width: 80%;
+    margin-bottom: v.$spacing-lg;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    gap: v.$spacing-md;
+
+    &-button {
+      width: 150px;
+      background-color: v.$primary-color;
+      color: v.$white;
+      font-weight: 600;
+      padding: v.$spacing-sm v.$spacing-lg;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(v.$primary-color, 10%);
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: v.$spacing-xs;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      color: v.$secondary-color;
+
+      &:hover {
+        color: v.$primary-color;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+/* Feature Artwork */
+.feature {
+  &__title {
+    font-size: v.$font-size-xl;
+    font-weight: 700;
+    margin-bottom: v.$spacing-lg;
+    color: v.$secondary-color;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$spacing-md;
+
+    &-item {
+      border: 2px solid v.$secondary-color;
+      padding: 5px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* NFT Card */
+.nft-card {
+  height: 960px;
+  overflow: visible;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  background-color: v.$secondary-color;
+  position: absolute;
+  top: -110px;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__logo {
+    height: 80%;
+    max-width: 100%;
+    object-fit: contain;
+    margin-top: 170px;
+  }
+
+  &__image {
+    width: 550px;
+    height: 80%;
+    object-fit: contain;
+    margin-left: 40px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    padding: v.$spacing-md;
+    display: flex;
+    flex-direction: column;
+    background-color: v.$white;
+    width: 540px;
+    height: auto;
+    bottom: 90px;
+    position: relative;
+    margin-left: 45px;
+    z-index: 3;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: v.$spacing-md;
+    margin-bottom: v.$spacing-md;
+    border-bottom: 1px solid v.$gray-light;
+  }
+
+  &__owner {
+    display: flex;
+    align-items: center;
+    gap: v.$spacing-sm;
+
+    &-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: column;
+      gap: v.$spacing-xs;
+    }
+
+    &-name {
+      font-size: v.$font-size-sm;
+      color: v.$gray;
+      font-weight: 500;
+    }
+  }
+
+  &__title {
+    font-size: v.$font-size-md;
+    font-weight: 700;
+    color: v.$secondary-color;
+    margin: 0;
+  }
+
+  &__bid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: v.$spacing-xs;
+
+    &-label {
+      font-size: v.$font-size-sm;
+      color: v.$gray;
+    }
+
+    &-price {
+      font-size: v.$font-size-lg;
+      font-weight: 700;
+      color: v.$secondary-color;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: v.$spacing-md;
+    margin-top: v.$spacing-sm;
+
+    &-bid {
+      flex: 1;
+      background-color: v.$primary-color;
+      color: v.$white;
+      font-weight: 600;
+      padding: v.$spacing-sm v.$spacing-md;
+      border-radius: v.$border-radius-sm;
+      text-align: center;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(v.$primary-color, 10%);
+      }
+    }
+
+    &-view {
+      flex: 1;
+      font-weight: 500;
+      color: v.$secondary-color;
+      text-align: center;
+      padding: v.$spacing-sm 0;
+      border: 1px solid v.$gray-light;
+      border-radius: v.$border-radius-sm;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: v.$primary-color;
+        border-color: v.$primary-color;
+      }
+    }
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    padding: v.$spacing-md v.$spacing-lg;
+    color: v.$white;
+    width: 480px;
+    margin-left: -50px;
+    top: 220px;
+    position: absolute;
+    z-index: 4;
+    gap: 60px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: v.$spacing-xs;
+      flex: 1;
+      padding: v.$spacing-xs;
+
+      &-number {
+        font-size: v.$font-size-lg;
+        font-weight: 700;
+        color: v.$primary-color;
+      }
+
+      &-label {
+        font-size: v.$font-size-sm;
+        color: v.$gray-light;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+

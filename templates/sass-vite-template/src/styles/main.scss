@@ -1,0 +1,26 @@
+$primary-color: #e25959;
+$secondary-color: #fff;
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $secondary-color;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: $secondary-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+

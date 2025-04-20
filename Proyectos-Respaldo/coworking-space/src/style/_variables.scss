@@ -1,0 +1,55 @@
+// Colores
+$primary-color: #9b9a78;
+$secondary-color: #FF8A00;
+$dark-color: #292828;
+$light-color: #FFFFFF;
+$gray-100: #F8F9FA;
+$gray-200: #E9ECEF;
+$gray-300: #DEE2E6;
+$gray-400: #CED4DA;
+$gray-500: #ADB5BD;
+$gray-600: #6C757D;
+$gray-700: #495057;
+$gray-800: #343A40;
+$gray-900: #212529;
+
+// Tipografía
+$font-family-base: 'Poppins', sans-serif;
+$font-family-heading: 'Playfair Display', serif;
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 1.8;
+
+// Espaciado
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 1rem;
+$spacing-4: 1.5rem;
+$spacing-5: 2rem;
+$spacing-6: 3rem;
+$spacing-7: 4rem;
+$spacing-8: 5rem;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Bordes y sombras
+$border-radius-sm: 0.25rem;
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
+$box-shadow: 0 0.5rem 1rem rgba($dark-color, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($dark-color, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba($dark-color, 0.175);
+
+// Transiciones
+$transition-base: all 0.3s ease-in-out;
+$transition-fast: all 0.15s ease-in-out;

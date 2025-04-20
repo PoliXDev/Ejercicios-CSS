@@ -1,0 +1,16 @@
+@use './abstracts/abstracts'; // main styles - Conquer Blocks
+@use './base/base';
+@use './components/components';
+@use './layout/layout';
+@use './layout/hero';
+@use './pages/pages';
+@use './themes/themes';
+@use './vendors/vendors';
+
+// pages
+@import 'pages/home';
+@import 'pages/login';
+@import 'pages/quienes-somos';
+@import 'pages/blog';
+@import 'pages/contacto';
+@import 'pages/cursos';

@@ -1,0 +1,1 @@
+{"name":"conquerblocks-website","version":"1.0.0","homepage":"https://polixdev.github.io/HTML_Conquerblocks","scripts":{"dev":"vite","build":"vite build","preview":"vite preview","deploy":"gh-pages -d dist"},"devDependencies":{"gh-pages":"^6.1.1","live-server":"^1.2.2","sass":"^1.72.0","vite":"^5.2.10"},"dependencies":{"glob":"^11.0.1"}}
